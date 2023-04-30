@@ -103,7 +103,7 @@
       >;
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
-    #els
+    #else
     #error "Layout not defined, please define a layout by uncommenting the appropriate line in bt60_v2.keymap"
     #endif
 
