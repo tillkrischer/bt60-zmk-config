@@ -27,11 +27,12 @@
   behaviors {
       lh_pht: left_hand_positional_hold_tap {
           compatible = "zmk,behavior-hold-tap";
-          label = "LEFT_POSITIONAL_HOLD_TAP";
           #binding-cells = <2>;
+          label = "LEFT_POSITIONAL_HOLD_TAP";
           flavor = "balanced";
-          tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-          quick-tap-ms = <125>;
+          tapping-term-ms = <280>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+          quick-tap-ms = <175>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+          global-quick-tap;
           bindings = <&kp>, <&kp>;
           hold-trigger-key-positions = <
             6 7 8 9 10 11 12
@@ -39,14 +40,16 @@
             34 35 36 37 38 39 
             47 48 49 50 51
           >;    // <---[[right-hand keys]]
+          hold-trigger-on-release;
       };
       rh_pht: right_hand_positional_hold_tap {
           compatible = "zmk,behavior-hold-tap";
-          label = "RIGHT_POSITIONAL_HOLD_TAP";
           #binding-cells = <2>;
+          label = "RIGHT_POSITIONAL_HOLD_TAP";
           flavor = "balanced";
-          tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-          quick-tap-ms = <125>;
+          tapping-term-ms = <280>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+          quick-tap-ms = <175>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+          global-quick-tap;
           bindings = <&kp>, <&kp>;
           hold-trigger-key-positions = <
             1 2 3 4 5
@@ -54,6 +57,7 @@
             29 30 31 32 33
             42 43 44 45 46
           >;    // <---[[left-hand keys]]
+          hold-trigger-on-release;
       };
   };
 
